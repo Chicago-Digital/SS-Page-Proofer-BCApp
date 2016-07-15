@@ -1,0 +1,1 @@
+{module_json,json="/_System/apps/solid-page-proofer/_data/data.json" collection="pageProofer"}

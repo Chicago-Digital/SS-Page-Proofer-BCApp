@@ -1,0 +1,41 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<title>Solid Company Settings</title>
+	<link href="/_System/apps/solid-page-proofer/_assets/css/app.css" type="text/css" rel="stylesheet" media="screen" />
+    <script type="text/javascript" src="//code.jquery.com/jquery-1.10.2.min.js"></script>
+    <script type="text/javascript" src="//cdnjs.cloudflare.com/ajax/libs/jquery-cookie/1.3.1/jquery.cookie.min.js"></script>
+    <script type="text/javascript" src="//cdnjs.cloudflare.com/ajax/libs/underscore.js/1.5.1/underscore-min.js"></script>
+    <script type="text/javascript" src="//cdnjs.cloudflare.com/ajax/libs/backbone.js/1.0.0/backbone-min.js"></script>
+    <script type="text/javascript" src="//cdn.worldsecuresystems.com/bcapi/bcapi-0.1.0.min.js"></script>
+    <script type="text/javascript" src="/_System/apps/solid-page-proofer/_assets/js/app.js"></script> 
+    <meta name="robots" content="noindex">
+</head>
+<body>
+<ul class="bcam-tabs">
+		<li>
+		<a id="tab-labels" href="/_System/Apps/solid-page-proofer/index.html">Page Proofer</a>
+		</li>
+		<li class="active">
+		<a id="tab-instructions" href="/_System/Apps/solid-page-proofer/instructions.html">Instructions</a>
+		</li>
+</ul>
+<div id="container-body">
+	<h1><span>Page Proofer - Version 1.0</span>    </h1>
+    <h2>Description</h2>
+	<p>Easily embed Page Proofer code into your Business Catalyst site. What makes this App unique from just adding the default Page Proofer code snippet is that it automatically enables pageproofer if the user is logged into the backend or logged in on the Business Catalyst Domain. This makes it easy for clients to give feedback durring development and after the page goes live.</p>
+<h2>Developer Notes</h2>
+<h3>Tag to Enable App on Website</h3>
+<p>Place in the head of the template</p>
+<pre>
+<code class="http">&#123;% include &quot;/_System/apps/solid-page-proofer/_config/pageProoferCode.inc&quot; -%&#125;</span></code></pre>
+    
+	<h3>Finding Page Proofer Account ID and Site ID</h3>
+	<p>Log into Page Proofer click on the site you are installing it on. See the following address URL.<br>https://app.pageproofer.com/<strong>[Account ID]</strong>/dashboard/<strong>[Site ID]</strong>/</p>
+	
+	<h2>Remove Page Proofer</h2>
+<p><strong>WARNING: </strong>Removing this application will delete the app. No modifications will be made to your pages outside the app folder.</p>
+<button id = "delete-app" class="btn btn-danger">Delete App</button>
+</div>
+</body>
+</html>

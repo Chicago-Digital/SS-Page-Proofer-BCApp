@@ -1,0 +1,49 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<title>Page Proofer</title>
+<link href="/_System/apps/solid-page-proofer/_assets/css/app.css" type="text/css" rel="stylesheet" media="screen" />
+<script type="text/javascript" src="//code.jquery.com/jquery-1.10.2.min.js"></script>
+<script type="text/javascript" src="//cdnjs.cloudflare.com/ajax/libs/jquery-cookie/1.3.1/jquery.cookie.min.js"></script>
+<script type="text/javascript" src="//cdnjs.cloudflare.com/ajax/libs/underscore.js/1.5.1/underscore-min.js"></script>
+<script type="text/javascript" src="//cdnjs.cloudflare.com/ajax/libs/backbone.js/1.0.0/backbone-min.js"></script>
+<script type="text/javascript" src="//cdn.worldsecuresystems.com/bcapi/bcapi-0.1.0.min.js"></script>
+<script type="text/javascript" src="/_System/apps/solid-page-proofer/_assets/js/app.js"></script>
+<meta name="robots" content="noindex">
+{%include "/_System/apps/solid-page-proofer/_data/pageProoferVars.inc"%}
+</head>
+<body>
+<ul class="bcam-tabs">
+  <li class="active"> <a id="tab-labels" href="/_System/Apps/solid-page-proofer/index.html">Settings</a> </li>
+  <li> <a id="tab-instructions" href="/_System/Apps/solid-page-proofer/instructions.html">Instructions</a> </li>
+</ul>
+<div id="container-body">
+  <h1><span>Page Proofer Setup</span></h1>
+  <form id="companySettingsForm" >
+    <p>
+      <label for="accountID">Account ID*</label>
+      <input type="text" id="accountID" name="accountID" value="{{pageProofer.accountID}}"/>
+    </p>
+    <p>
+      <label for="siteID">Site ID*</label>
+      <input type="text" id="siteID" name="siteID" value="{{pageProofer.siteID}}"/>
+    </p>
+    <p>
+      <label for="BCdomain">Custom BC Domain</label>
+      <input type="text" id="BCdomain" name="BCdomain" value="{{pageProofer.BCdomain}}"/>
+    </p>
+    <p>
+      <label for="enabled">Enabled</label>
+      <input type="checkbox" name="enabled" {% if pageProofer.enabled == "on" -%}checked="checked"{% endif -%}/>
+    </p>
+    <p>
+      <label for="disableBC">Disable PageProofer on<br />Business Catalyst Domain</label>
+      <input type="checkbox" name="disableBC" {% if pageProofer.disableBC == "on" -%}checked="checked"{% endif -%}/>
+    </p>
+    <p class="submit">
+      <input type="submit" value="Save"/>
+      <span id="confirmation"></span> </p>
+  </form>
+</div>
+</body>
+</html>
