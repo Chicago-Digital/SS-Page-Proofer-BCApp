@@ -1,4 +1,6 @@
 $(document).ready(function(){
+	var _appKey = $("body").attr('data-appKey');
+	appTabSelector();
 	$('#companySettingsForm').submit(function (e){
 		e.preventDefault();
 		$('#confirmation').text("");
@@ -13,15 +15,20 @@ $(document).ready(function(){
 	$('input').change(function(){
 		$('#confirmation').text("Click to Save Changes");
 	});
+
+	function ConvertFormToJSON(form){
+		var array = jQuery(form).serializeArray();
+		var json = {};
+		jQuery.each(array, function() {
+			json[this.name] = this.value || '';
+		});
+		return json;
+	}
+	function appTabSelector(){
+		var _currentTab = window.location.pathname.split(_appKey+'/')[1];
+		$('a[href^="'+_currentTab+'"]').parent().addClass('active');
+	}
 });
-function ConvertFormToJSON(form){
-    var array = jQuery(form).serializeArray();
-    var json = {};
-    jQuery.each(array, function() {
-        json[this.name] = this.value || '';
-    });
-    return json;
-} 
 //global vars
 var _mainAppFolder = new BCAPI.Models.FileSystem.Folder('/_System/Apps/solid-page-proofer'); 
 
