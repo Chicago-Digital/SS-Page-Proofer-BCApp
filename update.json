@@ -1,0 +1,21 @@
+{
+  "AddOrUpdate": [
+"/_System/Apps/solid-page-proofer/_assets/app/_head.inc",
+"/_System/Apps/solid-page-proofer/_assets/app/_tabs.inc",
+"/_System/Apps/solid-page-proofer/_assets/css/app.css",
+"/_System/Apps/solid-page-proofer/_assets/js/app.js",
+"/_System/Apps/solid-page-proofer/_config/manifest.json",
+"/_System/Apps/solid-page-proofer/_config/pageProoferCode.inc",
+"/_System/Apps/solid-page-proofer/_data/data.json",
+"/_System/Apps/solid-page-proofer/_data/pageProoferVars.inc",
+"/_System/Apps/solid-page-proofer/index.html",
+"/_System/Apps/solid-page-proofer/instructions.html"
+  ],
+  "DoNothing": [
+	  "/_System/Apps/solid-page-proofer/_config/menu.json",
+	  "/_System/Apps/solid-page-proofer/_config/icon.png",
+  ],
+  "CopyMove": [],
+  "DeleteFile": [],
+  "DeleteFolder": []
+}
